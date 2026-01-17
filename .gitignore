@@ -144,11 +144,12 @@ cython_debug/
 *~
 .DS_Store
 
-# Data files
-data/*.csv
+# Data files (keep raw data, ignore processed)
+data/processed/
+data/cleaned_data.csv
 data/*.xlsx
-data/*.json
 data/*.parquet
+!data/raw/
 !data/README.md
 
 # Model files
@@ -160,7 +161,24 @@ models/*.model
 models/*.pt
 models/*.pth
 models/*.onnx
+models/*.keras
 !models/README.md
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Experiment tracking
+experiments/
+runs/
+outputs/
+
+# Weights & Biases
+wandb/
+
+# TensorBoard
+logs/
+tensorboard/
 
 # Large files
 *.zip
